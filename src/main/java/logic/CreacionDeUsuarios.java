@@ -10,6 +10,8 @@ public class CreacionDeUsuarios {
         lista.anadirUsuario("admin", "admin", "admin");
         lista.anadirUsuario("Gabriel", "gabi", "gabicapo");
         lista.anadirUsuario("Felix", "felix", "felix123");
+        lista.anadirUsuario("Lautaro", "salina", "salinex");
+        lista.anadirUsuario("Ori", "ori", "oriana");
     }
 
     public ListaUsuarios getListaUsuarios(){
