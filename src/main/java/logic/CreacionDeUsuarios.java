@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class CreacionDeUsuarios {
     ListaUsuarios lista = new ListaUsuarios();
 
-    public CreacionDeUsuarios(){
+
+    public CreacionDeUsuarios(){ //Creo todos los usuarios con el metodo anadirUsuario de la clase ListaUsuarios
         lista.anadirUsuario("root", "root", "root");
         lista.anadirUsuario("admin", "admin", "admin");
         lista.anadirUsuario("Gabriel", "gabi", "gabicapo");
@@ -16,6 +17,6 @@ public class CreacionDeUsuarios {
 
     public ListaUsuarios getListaUsuarios(){
         return lista;
-    }
+    } //Acá devuelvo la lista
 }
 

@@ -11,13 +11,12 @@ public class BuscadorDeUsuarios {
     }
 
     public int existe(String us, String pass) {
-        System.out.println("buscando");
-        Predicate<Usuario> usIgual = usuario -> usuario.getUsuario().equals(us);
-        Predicate<Usuario> contraIgual = usuario -> usuario.getContra().equals(pass);
+        Predicate<Usuario> usIgual = usuario -> usuario.getUsuario().equals(us); //lambda de usuario
+        Predicate<Usuario> contraIgual = usuario -> usuario.getContra().equals(pass); //lambda de contra
 
-        // Check if there is any user with the given username (us)
+        // filtro de usuario igual
         boolean userExists = dondeBuscar.stream().anyMatch(usIgual);
-        // Check if there is any user with the given password (pass)
+        // filtro de contraseña igual
         boolean passwordExists = dondeBuscar.stream().anyMatch(contraIgual);
 
         if (userExists) {

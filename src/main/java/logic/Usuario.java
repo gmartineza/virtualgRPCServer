@@ -1,6 +1,7 @@
 package logic;
 
 public class Usuario {
+    //el usuario va a tener un nombre, un ususario y una contraseña.
     private String nombre;
     private String usuario;
     private String contra;
@@ -11,6 +12,8 @@ public class Usuario {
         setNombre(nom);
     }
 
+
+    //getters y setters de encapsulación
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
