@@ -21,7 +21,7 @@ public final class User {
     /**
      * <code>string username = 1;</code>
      */
-    String getUsername();
+    java.lang.String getUsername();
     /**
      * <code>string username = 1;</code>
      */
@@ -31,7 +31,7 @@ public final class User {
     /**
      * <code>string password = 2;</code>
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 2;</code>
      */
@@ -55,7 +55,7 @@ public final class User {
       password_ = "";
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -66,7 +66,7 @@ public final class User {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -80,13 +80,13 @@ public final class User {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               username_ = s;
               break;
             }
             case 18: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               password_ = s;
               break;
@@ -112,30 +112,30 @@ public final class User {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return internal_static_LoginRequest_descriptor;
+      return com.cursoGrpc.grpc.User.internal_static_LoginRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return internal_static_LoginRequest_fieldAccessorTable
+      return com.cursoGrpc.grpc.User.internal_static_LoginRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.cursoGrpc.grpc.User.LoginRequest.class, com.cursoGrpc.grpc.User.LoginRequest.Builder.class);
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile Object username_;
+    private volatile java.lang.Object username_;
     /**
      * <code>string username = 1;</code>
      */
-    public String getUsername() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -145,11 +145,11 @@ public final class User {
      */
     public com.google.protobuf.ByteString
         getUsernameBytes() {
-      Object ref = username_;
-      if (ref instanceof String) {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         username_ = b;
         return b;
       } else {
@@ -158,18 +158,18 @@ public final class User {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 2;</code>
      */
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -179,11 +179,11 @@ public final class User {
      */
     public com.google.protobuf.ByteString
         getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -192,7 +192,7 @@ public final class User {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -202,7 +202,7 @@ public final class User {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getUsernameBytes().isEmpty()) {
@@ -214,7 +214,7 @@ public final class User {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -231,8 +231,8 @@ public final class User {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -250,7 +250,7 @@ public final class User {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -336,7 +336,7 @@ public final class User {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -344,15 +344,15 @@ public final class User {
     public static Builder newBuilder(com.cursoGrpc.grpc.User.LoginRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -365,13 +365,13 @@ public final class User {
         com.cursoGrpc.grpc.User.LoginRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return internal_static_LoginRequest_descriptor;
+        return com.cursoGrpc.grpc.User.internal_static_LoginRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return internal_static_LoginRequest_fieldAccessorTable
+        return com.cursoGrpc.grpc.User.internal_static_LoginRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.cursoGrpc.grpc.User.LoginRequest.class, com.cursoGrpc.grpc.User.LoginRequest.Builder.class);
       }
@@ -382,7 +382,7 @@ public final class User {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -391,7 +391,7 @@ public final class User {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         username_ = "";
@@ -401,18 +401,18 @@ public final class User {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return internal_static_LoginRequest_descriptor;
+        return com.cursoGrpc.grpc.User.internal_static_LoginRequest_descriptor;
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.LoginRequest getDefaultInstanceForType() {
-        return getDefaultInstance();
+        return com.cursoGrpc.grpc.User.LoginRequest.getDefaultInstance();
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.LoginRequest build() {
         com.cursoGrpc.grpc.User.LoginRequest result = buildPartial();
         if (!result.isInitialized()) {
@@ -421,7 +421,7 @@ public final class User {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.LoginRequest buildPartial() {
         com.cursoGrpc.grpc.User.LoginRequest result = new com.cursoGrpc.grpc.User.LoginRequest(this);
         result.username_ = username_;
@@ -430,39 +430,39 @@ public final class User {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cursoGrpc.grpc.User.LoginRequest) {
           return mergeFrom((com.cursoGrpc.grpc.User.LoginRequest)other);
@@ -473,7 +473,7 @@ public final class User {
       }
 
       public Builder mergeFrom(com.cursoGrpc.grpc.User.LoginRequest other) {
-        if (other == getDefaultInstance()) return this;
+        if (other == com.cursoGrpc.grpc.User.LoginRequest.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
           onChanged();
@@ -487,12 +487,12 @@ public final class User {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -511,20 +511,20 @@ public final class User {
         return this;
       }
 
-      private Object username_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <code>string username = 1;</code>
        */
-      public String getUsername() {
-        Object ref = username_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -532,11 +532,11 @@ public final class User {
        */
       public com.google.protobuf.ByteString
           getUsernameBytes() {
-        Object ref = username_;
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           username_ = b;
           return b;
         } else {
@@ -547,7 +547,7 @@ public final class User {
        * <code>string username = 1;</code>
        */
       public Builder setUsername(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -580,20 +580,20 @@ public final class User {
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 2;</code>
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -601,11 +601,11 @@ public final class User {
        */
       public com.google.protobuf.ByteString
           getPasswordBytes() {
-        Object ref = password_;
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -616,7 +616,7 @@ public final class User {
        * <code>string password = 2;</code>
        */
       public Builder setPassword(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -648,13 +648,13 @@ public final class User {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -676,7 +676,7 @@ public final class User {
 
     private static final com.google.protobuf.Parser<LoginRequest>
         PARSER = new com.google.protobuf.AbstractParser<LoginRequest>() {
-      @Override
+      @java.lang.Override
       public LoginRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -689,12 +689,12 @@ public final class User {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<LoginRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.cursoGrpc.grpc.User.LoginRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -708,7 +708,7 @@ public final class User {
     /**
      * <code>string responsemessage = 1;</code>
      */
-    String getResponsemessage();
+    java.lang.String getResponsemessage();
     /**
      * <code>string responsemessage = 1;</code>
      */
@@ -737,7 +737,7 @@ public final class User {
       responseCode_ = 0;
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -748,7 +748,7 @@ public final class User {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -762,7 +762,7 @@ public final class User {
               done = true;
               break;
             case 10: {
-              String s = input.readStringRequireUtf8();
+              java.lang.String s = input.readStringRequireUtf8();
 
               responsemessage_ = s;
               break;
@@ -793,30 +793,30 @@ public final class User {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return internal_static_APIResponse_descriptor;
+      return com.cursoGrpc.grpc.User.internal_static_APIResponse_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return internal_static_APIResponse_fieldAccessorTable
+      return com.cursoGrpc.grpc.User.internal_static_APIResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.cursoGrpc.grpc.User.APIResponse.class, com.cursoGrpc.grpc.User.APIResponse.Builder.class);
     }
 
     public static final int RESPONSEMESSAGE_FIELD_NUMBER = 1;
-    private volatile Object responsemessage_;
+    private volatile java.lang.Object responsemessage_;
     /**
      * <code>string responsemessage = 1;</code>
      */
-    public String getResponsemessage() {
-      Object ref = responsemessage_;
-      if (ref instanceof String) {
-        return (String) ref;
+    public java.lang.String getResponsemessage() {
+      java.lang.Object ref = responsemessage_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         responsemessage_ = s;
         return s;
       }
@@ -826,11 +826,11 @@ public final class User {
      */
     public com.google.protobuf.ByteString
         getResponsemessageBytes() {
-      Object ref = responsemessage_;
-      if (ref instanceof String) {
+      java.lang.Object ref = responsemessage_;
+      if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         responsemessage_ = b;
         return b;
       } else {
@@ -848,7 +848,7 @@ public final class User {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -858,7 +858,7 @@ public final class User {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getResponsemessageBytes().isEmpty()) {
@@ -870,7 +870,7 @@ public final class User {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -888,8 +888,8 @@ public final class User {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -907,7 +907,7 @@ public final class User {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -993,7 +993,7 @@ public final class User {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1001,15 +1001,15 @@ public final class User {
     public static Builder newBuilder(com.cursoGrpc.grpc.User.APIResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1022,13 +1022,13 @@ public final class User {
         com.cursoGrpc.grpc.User.APIResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return internal_static_APIResponse_descriptor;
+        return com.cursoGrpc.grpc.User.internal_static_APIResponse_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return internal_static_APIResponse_fieldAccessorTable
+        return com.cursoGrpc.grpc.User.internal_static_APIResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.cursoGrpc.grpc.User.APIResponse.class, com.cursoGrpc.grpc.User.APIResponse.Builder.class);
       }
@@ -1039,7 +1039,7 @@ public final class User {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1048,7 +1048,7 @@ public final class User {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         responsemessage_ = "";
@@ -1058,18 +1058,18 @@ public final class User {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return internal_static_APIResponse_descriptor;
+        return com.cursoGrpc.grpc.User.internal_static_APIResponse_descriptor;
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.APIResponse getDefaultInstanceForType() {
-        return getDefaultInstance();
+        return com.cursoGrpc.grpc.User.APIResponse.getDefaultInstance();
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.APIResponse build() {
         com.cursoGrpc.grpc.User.APIResponse result = buildPartial();
         if (!result.isInitialized()) {
@@ -1078,7 +1078,7 @@ public final class User {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.APIResponse buildPartial() {
         com.cursoGrpc.grpc.User.APIResponse result = new com.cursoGrpc.grpc.User.APIResponse(this);
         result.responsemessage_ = responsemessage_;
@@ -1087,39 +1087,39 @@ public final class User {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cursoGrpc.grpc.User.APIResponse) {
           return mergeFrom((com.cursoGrpc.grpc.User.APIResponse)other);
@@ -1130,7 +1130,7 @@ public final class User {
       }
 
       public Builder mergeFrom(com.cursoGrpc.grpc.User.APIResponse other) {
-        if (other == getDefaultInstance()) return this;
+        if (other == com.cursoGrpc.grpc.User.APIResponse.getDefaultInstance()) return this;
         if (!other.getResponsemessage().isEmpty()) {
           responsemessage_ = other.responsemessage_;
           onChanged();
@@ -1143,12 +1143,12 @@ public final class User {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1167,20 +1167,20 @@ public final class User {
         return this;
       }
 
-      private Object responsemessage_ = "";
+      private java.lang.Object responsemessage_ = "";
       /**
        * <code>string responsemessage = 1;</code>
        */
-      public String getResponsemessage() {
-        Object ref = responsemessage_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getResponsemessage() {
+        java.lang.Object ref = responsemessage_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+          java.lang.String s = bs.toStringUtf8();
           responsemessage_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1188,11 +1188,11 @@ public final class User {
        */
       public com.google.protobuf.ByteString
           getResponsemessageBytes() {
-        Object ref = responsemessage_;
+        java.lang.Object ref = responsemessage_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+                  (java.lang.String) ref);
           responsemessage_ = b;
           return b;
         } else {
@@ -1203,7 +1203,7 @@ public final class User {
        * <code>string responsemessage = 1;</code>
        */
       public Builder setResponsemessage(
-          String value) {
+          java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1261,13 +1261,13 @@ public final class User {
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1289,7 +1289,7 @@ public final class User {
 
     private static final com.google.protobuf.Parser<APIResponse>
         PARSER = new com.google.protobuf.AbstractParser<APIResponse>() {
-      @Override
+      @java.lang.Override
       public APIResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1302,12 +1302,12 @@ public final class User {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<APIResponse> getParserForType() {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.cursoGrpc.grpc.User.APIResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1333,7 +1333,7 @@ public final class User {
     private Empty() {
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1344,7 +1344,7 @@ public final class User {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new NullPointerException();
+        throw new java.lang.NullPointerException();
       }
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -1377,19 +1377,19 @@ public final class User {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return internal_static_Empty_descriptor;
+      return com.cursoGrpc.grpc.User.internal_static_Empty_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return internal_static_Empty_fieldAccessorTable
+      return com.cursoGrpc.grpc.User.internal_static_Empty_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.cursoGrpc.grpc.User.Empty.class, com.cursoGrpc.grpc.User.Empty.Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1399,13 +1399,13 @@ public final class User {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       unknownFields.writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1416,8 +1416,8 @@ public final class User {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
       }
@@ -1431,7 +1431,7 @@ public final class User {
       return result;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1513,7 +1513,7 @@ public final class User {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1521,15 +1521,15 @@ public final class User {
     public static Builder newBuilder(com.cursoGrpc.grpc.User.Empty prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1542,13 +1542,13 @@ public final class User {
         com.cursoGrpc.grpc.User.EmptyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return internal_static_Empty_descriptor;
+        return com.cursoGrpc.grpc.User.internal_static_Empty_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return internal_static_Empty_fieldAccessorTable
+        return com.cursoGrpc.grpc.User.internal_static_Empty_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.cursoGrpc.grpc.User.Empty.class, com.cursoGrpc.grpc.User.Empty.Builder.class);
       }
@@ -1559,7 +1559,7 @@ public final class User {
       }
 
       private Builder(
-          BuilderParent parent) {
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1568,24 +1568,24 @@ public final class User {
                 .alwaysUseFieldBuilders) {
         }
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return internal_static_Empty_descriptor;
+        return com.cursoGrpc.grpc.User.internal_static_Empty_descriptor;
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.Empty getDefaultInstanceForType() {
-        return getDefaultInstance();
+        return com.cursoGrpc.grpc.User.Empty.getDefaultInstance();
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.Empty build() {
         com.cursoGrpc.grpc.User.Empty result = buildPartial();
         if (!result.isInitialized()) {
@@ -1594,46 +1594,46 @@ public final class User {
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public com.cursoGrpc.grpc.User.Empty buildPartial() {
         com.cursoGrpc.grpc.User.Empty result = new com.cursoGrpc.grpc.User.Empty(this);
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return (Builder) super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
         return (Builder) super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return (Builder) super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+          int index, java.lang.Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+          java.lang.Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof com.cursoGrpc.grpc.User.Empty) {
           return mergeFrom((com.cursoGrpc.grpc.User.Empty)other);
@@ -1644,18 +1644,18 @@ public final class User {
       }
 
       public Builder mergeFrom(com.cursoGrpc.grpc.User.Empty other) {
-        if (other == getDefaultInstance()) return this;
+        if (other == com.cursoGrpc.grpc.User.Empty.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1673,13 +1673,13 @@ public final class User {
         }
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFieldsProto3(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1701,7 +1701,7 @@ public final class User {
 
     private static final com.google.protobuf.Parser<Empty>
         PARSER = new com.google.protobuf.AbstractParser<Empty>() {
-      @Override
+      @java.lang.Override
       public Empty parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1714,12 +1714,12 @@ public final class User {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<Empty> getParserForType() {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.cursoGrpc.grpc.User.Empty getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -1749,7 +1749,7 @@ public final class User {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\nuser.proto\"2\n\014LoginRequest\022\020\n\010username" +
       "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"<\n\013APIResponse\022" +
       "\027\n\017responsemessage\030\001 \001(\t\022\024\n\014responseCode" +
@@ -1775,19 +1775,19 @@ public final class User {
     internal_static_LoginRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_LoginRequest_descriptor,
-        new String[] { "Username", "Password", });
+        new java.lang.String[] { "Username", "Password", });
     internal_static_APIResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_APIResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_APIResponse_descriptor,
-        new String[] { "Responsemessage", "ResponseCode", });
+        new java.lang.String[] { "Responsemessage", "ResponseCode", });
     internal_static_Empty_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Empty_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Empty_descriptor,
-        new String[] { });
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
