@@ -16,7 +16,11 @@ public class BuscadorTest {
         assertEquals("pedro", lista.getLista().get(0).getUsuario());
         assertEquals("Pedro", lista.getLista().get(0).getNombre());
 
-        assertTrue(buscador.existe("pedro", "pedro"));
+        assertEquals(buscador.existe("xdas", "pedro"), 0);
+        assertEquals(buscador.existe("pedro", "daaaa"), 1);
+        assertEquals(buscador.existe("pedro", "pedro"), 2);
+
+
     }
 
 }
