@@ -22,14 +22,14 @@ public class BuscadorDeUsuarios {
         if (userExists) {
             if (passwordExists) {
                 // Existe us y pass
-                return 2;
+                return 0;
             } else {
                 // Exste us pero la contra es incorrecta
                 return 1;
             }
         } else {
             // No existe el us
-            return 0;
+            return 2;
         }
     }
 }
