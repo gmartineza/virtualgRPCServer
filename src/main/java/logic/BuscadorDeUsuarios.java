@@ -5,9 +5,18 @@ import java.util.function.Predicate;
 
 public class BuscadorDeUsuarios {
     private ArrayList<Usuario> dondeBuscar;
+    private String responseMessage;
 
     public BuscadorDeUsuarios(ListaUsuarios lista) {
         dondeBuscar = lista.getLista();
+    }
+
+    public String getResponseMessage() {
+        return responseMessage;
+    }
+
+    public void setResponseMessage(String responseMessage) {
+        this.responseMessage = responseMessage;
     }
 
     public int existe(String us, String pass) {
@@ -22,14 +31,17 @@ public class BuscadorDeUsuarios {
         if (userExists) {
             if (passwordExists) {
                 // Existe us y pass
-                return 2;
+                setResponseMessage("SUCCESS");
+                return 0;
             } else {
                 // Exste us pero la contra es incorrecta
+                setResponseMessage("BADPASS");
                 return 1;
             }
         } else {
             // No existe el us
-            return 0;
+            setResponseMessage("NOUSER");
+            return 2;
         }
     }
 }

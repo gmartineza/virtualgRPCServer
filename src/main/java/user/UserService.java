@@ -1,9 +1,7 @@
 package user;
 
-import com.cursoGrpc.grpc.User;
+import com.cursoGrpc.grpc.User.APIResponse;
 import com.cursoGrpc.grpc.userGrpc.userImplBase;
-import io.grpc.stub.StreamObserver;
-import com.cursoGrpc.grpc.User.*;
 import logic.BuscadorDeUsuarios;
 import logic.CreacionDeUsuarios;
 import logic.ListaUsuarios;
@@ -21,15 +19,11 @@ public class UserService extends userImplBase {
         String username = request.getUsername();
         String password = request.getPassword();
 
+
         APIResponse.Builder response = APIResponse.newBuilder();
 
-        if(buscador.existe(username, password) == 2){
-            response.setResponseCode(2).setResponsemessage("SUCCESS");
-        }else if (buscador.existe(username, password) == 1){
-            response.setResponseCode(1).setResponsemessage("BADPASS");
-        } else {
-            response.setResponseCode(0).setResponsemessage("NOUSER");
-        }
+        int responseCode = buscador.existe(username, password); //Busca el usuario y la contraseña
+        response.setResponseCode(responseCode).setResponsemessage(buscador.getResponseMessage()); //Devuelve con el codigo y mensaje
 
 
         responseObserver.onNext(response.build());
