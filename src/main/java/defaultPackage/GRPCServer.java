@@ -8,7 +8,7 @@ import java.io.IOException;
 public class GRPCServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         int port = 9090; // Puerto en el que escucha el servidor
-        String ipAddress = "IPV4 - PRIVADA"; // IPV4 en win, la privada
+        String ipAddress = "Private Ip"; // IPV4 en win, la privada
 
         Server server = ServerBuilder.forPort(port)
                 .addService(new UserService())
