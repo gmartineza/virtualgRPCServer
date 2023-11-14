@@ -23,12 +23,12 @@ public class UserService extends userImplBase {
 
         APIResponse.Builder response = APIResponse.newBuilder();
 
-        if(buscador.existe(username, password) == 2){
-            response.setResponseCode(2).setResponsemessage("SUCCESS");
+        if(buscador.existe(username, password) == 0){
+            response.setResponseCode(0).setResponsemessage("SUCCESS");
         }else if (buscador.existe(username, password) == 1){
             response.setResponseCode(1).setResponsemessage("BADPASS");
         } else {
-            response.setResponseCode(0).setResponsemessage("NOUSER");
+            response.setResponseCode(2).setResponsemessage("NOUSER");
         }
 
 
