@@ -1,11 +1,9 @@
 package defaultPackage;
 
-import com.cursoGrpc.grpc.userGrpc;
 import com.cursoGrpc.grpc.User.APIResponse;
 import com.cursoGrpc.grpc.User.LoginRequest;
+import com.cursoGrpc.grpc.userGrpc;
 import com.cursoGrpc.grpc.userGrpc.userBlockingStub;
-import com.cursoGrpc.grpc.userGrpc.userStub;
-
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -16,8 +14,8 @@ public class GRPCClient {
     userBlockingStub userStub = userGrpc.newBlockingStub(channel);
     
     LoginRequest loginRequest = LoginRequest.newBuilder().
-        setUsername("gabi").
-        setPassword("gabicapo").
+        setUsername("admin").
+        setPassword("admin").
         build();
 
     APIResponse response = userStub.login(loginRequest);
