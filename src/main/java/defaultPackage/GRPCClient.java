@@ -8,19 +8,13 @@ import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
 public class GRPCClient {
-    public static void main(String[] args){
-    ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
-    
-    userBlockingStub userStub = userGrpc.newBlockingStub(channel);
-    
-    LoginRequest loginRequest = LoginRequest.newBuilder().
-        setUsername("admin").
-        setPassword("admin").
-        build();
 
-    APIResponse response = userStub.login(loginRequest);
+    private ManagedChannel channel;
 
-    System.out.println(response.getResponsemessage());
-    
+    public GRPCClient(){
+    channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
+    }
+    public ManagedChannel getChannel() {
+        return channel;
     }
 }
