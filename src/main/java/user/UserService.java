@@ -15,10 +15,11 @@ public class UserService extends userImplBase {
         ListaUsuarios lista = users.getListaUsuarios();
         BuscadorDeUsuarios buscador = new BuscadorDeUsuarios(lista);
 
-        System.out.println("Inside Loqin");
+        System.out.println("Inside Loqin - Usuario: ");
         String username = request.getUsername();
         String password = request.getPassword();
 
+        System.out.println(username);
 
         APIResponse.Builder response = APIResponse.newBuilder();
 
