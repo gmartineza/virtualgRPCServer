@@ -15,8 +15,8 @@ public class UsuarioTest {
         assertEquals("pedro", lista.getLista().get(0).getUsuario());
         assertEquals("Pedro", lista.getLista().get(0).getNombre());
 
-        assertEquals(buscador.existe("pedro", "pedro"), 2);
+        assertEquals(buscador.existe("pedro", "pedro"), 0);
         assertEquals(buscador.existe("pedro", "asdasdo"), 1);
-        assertEquals(buscador.existe("xddx", "pedro"), 0);
+        assertEquals(buscador.existe("xddx", "pedro"), 2);
     }
 }
